@@ -42,14 +42,14 @@ def load_graphics(path, accept=('.png', '.jpg', '.bmp', '.gif')):
                 img = img.convert()
             graphics[name] = img
     return graphics
-#
-# def get_image(sheet, x, y, width, height, colorkey, scale):
-#     image = pygame.Surface([width, height])
-#     rect = image.get_rect()
-#     image.blit(sheet, (0, 0), (x, y, width, height))
-#     image.set_colorkey(colorkey)
-#     image = pygame.transform.scale(image, (int(rect.width * scale), int(rect.height * scale)))
-#     return image
-#
-#
+
+def get_image(sheet, x, y, width, height, colorkey, scale):
+    image = pygame.Surface([width, height])
+    rect = image.get_rect()
+    image.blit(sheet, (0, 0), (x, y, width, height))
+    image.set_colorkey(colorkey)
+    image = pygame.transform.scale(image, (int(rect.width * scale), int(rect.height * scale)))
+    return image
+
+
 
